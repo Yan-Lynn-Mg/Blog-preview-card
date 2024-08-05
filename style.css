@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray500: hsl(0, 0%, 42%);
+  --gray950: hsl(0, 0%, 7%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+}
+
+.card {
+  max-width: 356px;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 0.8rem;
+  border: 1px solid var(--gray950);
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray950);
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+}
+
+.card .img {
+  display: flex;
+  justify-content: center;
+}
+
+.card .img img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.card .text {
+  margin-top: 15px;
+}
+
+.card .text .learning {
+  width: 100px;
+  height: 30px;
+  background-color: var(--yellow);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 0.2rem;
+  font-weight: 800;
+}
+
+.card .text .publish {
+  margin-top: 15px;
+  font-weight: 500;
+  color: var(--gray500);
+}
+
+.card .text .heading {
+  margin-top: 17px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gray950);
+}
+
+.card .text .info {
+  margin-top: 15px;
+  font-weight: 500;
+  line-height: 1.3rem;
+  color: var(--gray500);
+}
+
+.card .text .name {
+  width: 130px;
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .text .name img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+.card .text .name p {
+  font-weight: 800;
+  color: var(--gray950);
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 300px;
+  }
+}
